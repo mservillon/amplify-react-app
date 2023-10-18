@@ -50,6 +50,16 @@ app.get('/coins', function(req, res) {
 })
 
 
+  app.get('/born', function(req, res) {
+      let bornApi = 'https://api.github.com/users/mservillon'
+    
+      axios.get(bornApi)
+        .then(response => {
+          res.json({ born: response.data })
+        })
+        .catch(err => res.json({ error: err }))
+    })
+
 /**********************
  * Example get method *
  **********************/

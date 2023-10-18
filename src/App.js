@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import { API } from 'aws-amplify'
+import { BornOn } from './BornOn'
 import './App.css';
 
 function App() {
@@ -24,10 +25,11 @@ function App() {
     const data = await API.get('cryptoapi', `/coins?limit=${limit}&start=${start}`);
     updateCoins(data.coins)
     updateLoading(false);
+    console.log(data);
   }
 
   useEffect(() => {
-    fetchCoins()
+    fetchCoins();
   }, [])
   
   return (
@@ -50,6 +52,7 @@ function App() {
           </div>
         ))
       }
+      <BornOn />
     </div>
   );
 }
