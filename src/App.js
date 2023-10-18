@@ -25,7 +25,6 @@ function App() {
     const data = await API.get('cryptoapi', `/coins?limit=${limit}&start=${start}`);
     updateCoins(data.coins)
     updateLoading(false);
-    console.log(data);
   }
 
   useEffect(() => {

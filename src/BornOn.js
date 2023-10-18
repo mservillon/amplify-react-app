@@ -15,7 +15,6 @@ export const BornOn = () => {
       const fetchName = async() => {
         updateLoading(true);
         const nameData = await API.get('cryptoapi', '/born');
-        console.log(nameData);
         updateBorn(nameData.born);
         updateLoading(false);
       }
