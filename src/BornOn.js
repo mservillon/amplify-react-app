@@ -30,7 +30,11 @@ export const BornOn = () => {
     return (
         <>
         {loading && <h1>Loading data for GitHub user...</h1>}
-        {!loading && <h3>The GitHub user {born.login} was made on {prettyDateFormat} !!</h3>}
+        {!loading && <h3>The GitHub user {born.login} was made on {prettyDateFormat} !! 
+        <br/>
+        <img src="https://avatars.githubusercontent.com/u/119347806?v=4" />
+        </h3>
+        }
         </>
     )
 }

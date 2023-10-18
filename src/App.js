@@ -48,7 +48,7 @@ function App() {
         !loading && coins.map((coin, index) => (
           <div key={index}>
             <h2>{coin.name} - {coin.symbol}</h2>
-            <h5>{coin.price_usd}</h5>
+            <h5>${coin.price_usd}</h5>
           </div>
         ))
       }
